@@ -799,7 +799,7 @@ extern "C" {
 extern {}
 
 #[cfg(not(target_os = "windows"))]
-#[link(name = "pcap")]
+//#[link(name = "pcap", kind = "static")]
 extern {
     // pub fn pcap_inject(arg1: *mut pcap_t, arg2: *const ::libc::c_void,
     //                    arg3: size_t) -> ::libc::c_int;

@@ -1,5 +1,4 @@
 [package]
-
 name = "pcap"
 version = "0.5.5"
 authors = ["Sean Bowe <ewillbefull@gmail.com>"]
@@ -10,6 +9,16 @@ homepage = "https://github.com/ebfull/pcap"
 repository = "https://github.com/ebfull/pcap"
 documentation = "https://ebfull.github.io/pcap/"
 license = "MIT OR Apache-2.0"
+#links = "pcap-1.7.4-glibc"
+build = "build.rs"
+
+#[target.x86_64-unknown-linux-musl]
+#rustc-link-search = ["/tmp/pcap-static/lib/"]
+#rustc-link-lib = ["pcap"]
+
+#[target.x86_64-unknown-linux-gnu]
+#rustc-link-search = ["."]
+#rustc-link-lib = ["pcap-1.7.4-glibc"]
 
 [dependencies]
 libc = "0.2.7"
